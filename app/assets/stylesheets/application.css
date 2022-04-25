@@ -13,6 +13,10 @@ body {
   margin: 33px;
 }
 
+#notice {
+  color: green;
+}
+
 p {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -20,9 +24,37 @@ p {
   margin: 33px;
 }
 
+h1 {
+  width: 914px;
+  margin: 17.42px 0;
+}
+
+th {
+  width: 192px;
+  height: 24px;
+  padding: 1px 1px 5px;
+}
+
 a {
   color: #000;
 }
+
+th {
+  padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+h2 {
+  width: 194px;
+  height: 18px;
+  margin: 16.185px 0;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
