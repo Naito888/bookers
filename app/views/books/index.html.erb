@@ -1,11 +1,14 @@
-<head>
-  <title>WebCampBackendNew</title>
-</head>
-  
-<body>
-  <p id="notice"></p>
+<div class="messege">
+  <p id="notice">
+    <%= notice %>
+  </p>
+</div>
+
+<header>
   <h1>Books</h1>
-  
+</header>
+
+<body>
   <table>
     <thed>
       <tr>
@@ -30,7 +33,23 @@
   </table>
   
   <h2>New book</h2>
-  <%= form_with model: @book do |f| %>
+  
+  <%= form_with(model:@book, local: true) do |form| %> <!--バリデーションチェック-->
+    <% if @book.errors.any? %> <!--ここからエラ〜メッセージ-->
+      <div id="error_explanation">
+        <h2><%= pluralize(@book.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+        <ul>
+          <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+  
+  
+  <%= form_with model: @book do |f| %> <!--投稿フォーム-->
   
   <div class="field">
     <label for="book_title">Title</label>
@@ -46,4 +65,5 @@
     <%= f.submit 'Create Book' %>
   </div>
   <% end %>
+
 </body>
