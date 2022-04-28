@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-color: #fff;
   color: #333;
@@ -17,7 +18,7 @@ body {
   color: green;
 }
 
-p {
+p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -48,8 +49,6 @@ td {
     padding-left: 5px;
     padding-right: 5px;
 }
-
-
 
 
 
